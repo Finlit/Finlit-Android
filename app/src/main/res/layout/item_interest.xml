@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_ten">
+
+        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/checkbox"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text"
+            android:id="@+id/tv_question"/>
+
+        <CheckBox
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end"
+            android:id="@+id/checkbox"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <com.app.finlit.utils.views.EditTextEuphemiaRegular
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="@color/black"
+        android:inputType="textCapSentences"
+        android:id="@+id/et_answer"
+        android:visibility="gone"
+        android:textSize="@dimen/text"
+        android:imeOptions="actionDone"
+        android:paddingLeft="@dimen/padding_ten"
+        android:paddingRight="@dimen/padding_ten"
+        android:background="@drawable/background_edittext"
+        android:layout_marginLeft="@dimen/margin_twenty"
+        android:layout_marginRight="@dimen/margin_twenty"/>
+
+</LinearLayout>

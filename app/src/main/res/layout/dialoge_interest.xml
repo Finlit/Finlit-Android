@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/linear"
+    android:layout_height="match_parent">
+
+    <com.app.finlit.utils.views.TextViewSegoeSemiBold
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="SELECT INTERESTS"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_heading"
+        android:textColor="@color/colorPrimary"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_interest"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/margin_twenty"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        android:paddingBottom="@dimen/margin_twenty">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/margin_ten"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_five"
+            android:layout_marginRight="@dimen/margin_five"
+            android:background="@drawable/background_edittext">
+
+            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                android:id="@+id/txt_dialog_done"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_sub"
+                android:text="Done"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_five"
+            android:layout_marginRight="@dimen/margin_five"
+            android:background="@drawable/background_edittext">
+
+            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                android:id="@+id/txt_dialog_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_sub"
+                android:text="Cancel"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.app.finlit.ui.authenticate.ViewProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/lay_add_profile_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/lay_add_profile_top"
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/iv_add_profile_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/logo_profile" />
+
+                <ImageView
+                    android:id="@+id/iv_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@color/mask"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/toolbar_add_profile"
+                    layout="@layout/toolbar" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_twenty"
+                    android:layout_marginRight="150dp"
+                    android:layout_marginBottom="@dimen/margin_five"
+                    android:orientation="horizontal">
+
+                    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                        android:id="@+id/tv_gender_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_five"
+                        android:text="About Her"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_big"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="150dp"
+                    android:layout_marginBottom="@dimen/margin_twenty" />
+
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_twenty"
+                    android:layout_marginRight="150dp"
+                    android:layout_marginBottom="@dimen/margin_ten"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/rel_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/background_profile_image">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/padding_three"
+                        android:src="@mipmap/icon_camera" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/margin_twenty"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_message"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/icon_message_new" />
+
+                    <ImageView
+                        android:id="@+id/iv_open_Dates"
+                        android:layout_width="50dp"
+                        android:visibility="gone"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:src="@mipmap/icon_request_date" />
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="100dp"-->
+                <!--android:layout_marginLeft="@dimen/margin_twenty"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_toLeftOf="@id/rel_profile"-->
+                <!--android:layout_toStartOf="@id/rel_profile">-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:id="@+id/iv_result"/>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_gravity="center|start">-->
+
+                <!--<com.app.finlit.utils.views.TextViewEuphemiaRegular-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="JOINED FINLET"-->
+                <!--android:textColor="#AAB7B9"-->
+                <!--android:textSize="@dimen/text_small"-->
+                <!--android:paddingLeft="@dimen/padding_ten"/>-->
+
+                <!--<com.app.finlit.utils.views.TextViewSegoeSemiBold-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="ffdfbfdbdfbfdvbdf"-->
+                <!--android:id="@+id/tv_time"-->
+                <!--android:textColor="#676F70"-->
+                <!--android:textSize="@dimen/text"-->
+                <!--android:paddingLeft="@dimen/padding_ten"/>-->
+                <!--</LinearLayout>-->
+
+
+                <!--</LinearLayout>-->
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_second"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:orientation="vertical">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:text="About"
+                    android:textColor="#A8B5B7"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4B5658"
+                    android:textSize="@dimen/text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:background="@color/color_divid" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:text="Gender"
+                    android:textColor="#A8B5B7"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_gender"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:textColor="#4B5658"
+                    android:textSize="@dimen/text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:background="@color/color_divid" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:text="Age"
+                    android:textColor="#A8B5B7"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4B5658"
+                    android:textSize="@dimen/text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:background="@color/color_divid" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:text="@string/location"
+                    android:textColor="#A8B5B7"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_location"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:textColor="#4B5658"
+                    android:textSize="@dimen/text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:background="@color/color_divid" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:text="Financial Interest"
+                    android:textColor="#A8B5B7"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4B5658"
+                    android:textSize="@dimen/text" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:background="@color/color_divid" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="12dp"
+                            android:src="@mipmap/recommnd" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/margin_five"
+                            android:background="@color/color_divid" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:gravity="center_vertical"
+                            android:text="Recommend to Friend" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <!--<com.app.finlit.utils.views.TextViewSegoeSemiBold-->
+                <!--android:id="@+id/tv_message"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_marginTop="@dimen/margin_thirty"-->
+                <!--android:layout_marginLeft="@dimen/margin_ten"-->
+                <!--android:layout_marginRight="@dimen/margin_ten"-->
+                <!--android:layout_marginBottom="@dimen/margin_twenty"-->
+                <!--android:text="MESSAGE NOW"-->
+                <!--android:background="@drawable/background_sign_up"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/text" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_fifteen"
+                    android:layout_marginBottom="@dimen/margin_twenty"
+                    android:orientation="horizontal">
+
+                    <!--<com.app.finlit.utils.views.TextViewSegoeSemiBold-->
+                    <!--android:id="@+id/tv_edit"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_margin="@dimen/margin_five"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@drawable/background_sign_up"-->
+                    <!--android:text="EDIT"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="@dimen/text_heading" />-->
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin_five"
+                        android:layout_weight="1">
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:id="@+id/tv_block_user"
+                            android:text=" Block and Report"
+                            android:textColor="#67C1FA"
+                            android:textSize="@dimen/text_heading" />
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

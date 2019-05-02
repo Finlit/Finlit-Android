@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_card"
+    tools:context="com.app.finlit.ui.home.SubscriptionsActivity">
+
+    <include layout="@layout/toolbar_filter"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:layout_marginTop="@dimen/margin_ten"
+                app:elevation="@dimen/margin_seven">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/margin_ten">
+
+                    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Current Plan"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:textSize="@dimen/text_sub"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:layout_marginTop="@dimen/margin_five"
+                        android:layout_marginBottom="@dimen/margin_five"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_plan_name"
+                                android:text="Currently you have no active plan :"
+                                android:textColor="#A8A8AA"/>
+
+                            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text_small"
+                                android:id="@+id/tv_expiry_date"
+                                android:textColor="#B3B3B5"
+                                android:text=""/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2.9"
+                        android:id="@+id/linear_decent"
+                        android:background="@mipmap/subscription_second"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_ten"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:gravity="top"
+                                    android:layout_marginTop="-10dp"
+                                    android:textSize="@dimen/text_heading"/>
+
+                                <com.app.finlit.utils.views.TextViewEuphemiaBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:textSize="30sp"
+                                    android:id="@+id/tv_price_decent"
+                                    android:textColor="@color/white"
+                                    android:gravity="bottom"
+                                    />
+
+                                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/text"
+                                    android:gravity="bottom"
+                                    android:id="@+id/tv_per_decent"
+                                    android:layout_marginBottom="5dp"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="bottom"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="@dimen/margin_twenty"
+                                android:layout_marginLeft="@dimen/margin_twenty"
+                                android:background="@color/white_light"/>
+
+                            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text"
+                                android:textColor="@color/white"
+                                android:text="Unlimited messaging across all tiers"
+                                android:gravity="center"/>
+
+                            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#CCBC99"
+                                android:textSize="@dimen/text_small"
+                                android:text="A Plan to try FinLit Network "
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2.9"
+                            android:id="@+id/linear_popular"
+                            android:background="@mipmap/subsription_first"
+                            android:layout_marginLeft="@dimen/margin_ten"
+                            android:layout_marginRight="@dimen/margin_ten"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_ten"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white"
+                                        android:gravity="top"
+                                        android:layout_marginTop="-10dp"
+                                        android:textSize="@dimen/text_heading"/>
+
+                                    <com.app.finlit.utils.views.TextViewEuphemiaBold
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:textSize="30sp"
+                                        android:id="@+id/tv_price_popular"
+                                        android:textColor="@color/white"
+                                        android:gravity="bottom"
+                                        />
+
+                                    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/text"
+                                        android:gravity="bottom"
+                                        android:layout_marginBottom="5dp"
+                                        android:textColor="@color/white"
+                                        android:id="@+id/tv_per_popular"
+                                        android:layout_gravity="bottom"/>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height=".5dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="@dimen/margin_twenty"
+                                    android:layout_marginLeft="@dimen/margin_twenty"
+                                    android:background="@color/white_light"/>
+
+                                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/text"
+                                    android:textColor="@color/white"
+                                    android:text="Unlimited messaging across all tiers"
+                                    android:gravity="center"/>
+
+                                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#87929B"
+                                    android:textSize="@dimen/text_small"
+                                    android:text="Chance to Know people in finLit Network "
+                                    android:gravity="center"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2.9"
+                        android:id="@+id/linear_high_demand"
+                        android:background="@mipmap/subsription_third"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_ten"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:gravity="top"
+                                    android:layout_marginTop="-10dp"
+                                    android:textSize="@dimen/text_heading"/>
+
+                                <com.app.finlit.utils.views.TextViewEuphemiaBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:textSize="30sp"
+                                    android:id="@+id/tv_price_highdemand"
+                                    android:textColor="@color/white"
+                                    android:gravity="bottom"
+                                    />
+
+                                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/text"
+                                    android:gravity="bottom"
+                                    android:layout_marginBottom="5dp"
+                                    android:id="@+id/tv_per_highdemand"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="bottom"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="@dimen/margin_twenty"
+                                android:layout_marginLeft="@dimen/margin_twenty"
+                                android:background="@color/white_light"/>
+
+                            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text"
+                                android:textColor="@color/white"
+                                android:text="Unlimited messaging across all tiers"
+                                android:gravity="center"/>
+
+                            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#9A8884"
+                                android:textSize="@dimen/text_small"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:text="Enjoy Extra 10% Discount for yearly subscription"
+                                android:gravity="center"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                        android:id="@+id/tv_apply"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_marginBottom="@dimen/margin_ten"
+                        android:text="PURCHASE NOW"
+                        android:background="@drawable/background_sign_up"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

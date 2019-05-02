@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.finlit.ui.authenticate.SecuritySetupActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true"
+            android:id="@+id/lay_sign_in_main">
+
+            <RelativeLayout
+                android:id="@+id/lay_sign_in_top"
+                android:layout_width="match_parent"
+                android:layout_height="325dp"
+                android:background="@color/colorPrimaryDark">
+
+                <ImageView
+                    android:id="@+id/iv_left"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@mipmap/icon_back"
+                    android:padding="@dimen/padding_seven"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:contentDescription="@null" />
+
+                <ImageView
+                    android:id="@+id/iv_sign_in_logo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/sign_up_logo"
+                    android:padding="@dimen/padding_five"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_fifteen"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:contentDescription="@null" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaBold
+                    android:id="@+id/txt_sign_in_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_heading"
+                    android:textColor="@color/white"
+                    android:text="SECURITY SETUP"
+                    android:gravity="center"
+                    android:layout_below="@id/iv_sign_in_logo"
+                    android:layout_marginTop="@dimen/margin_ten"/>
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/white_light"
+                    android:text="@string/find_like_minded_people_for_your_financial_literacy"
+                    android:gravity="center"
+                    android:layout_below="@id/txt_sign_in_signin"
+                    android:layout_marginTop="@dimen/margin_ten"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_sign_in_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-100dp"
+                android:layout_below="@+id/lay_sign_in_top">
+
+                <View
+                    android:id="@+id/view_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="@dimen/margin_forty"
+                    android:layout_marginRight="@dimen/margin_forty"
+                    android:background="@color/pink"/>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_sign_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_below="@id/view_card"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:layout_marginBottom="@dimen/margin_five"
+                    app:elevation="@dimen/margin_seven">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:padding="@dimen/padding_five"
+                            android:background="@mipmap/icon_edittext"
+                            android:orientation="horizontal"
+                            android:weightSum="5"
+                            android:layout_marginTop="@dimen/margin_fifteen"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:layout_marginRight="@dimen/margin_twenty">
+
+                            <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                                android:id="@+id/et_user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:layout_weight="0.8"
+                                android:imeOptions="actionNext"
+                                android:ems="10"
+                                android:textSize="@dimen/text"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/text_grey"
+                                android:paddingLeft="@dimen/padding_ten"
+                                android:paddingRight="@dimen/padding_ten" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4.2"
+                                android:layout_marginRight="@dimen/margin_ten"
+                                android:contentDescription="@null"
+                                android:src="@mipmap/icon_password"
+                                android:padding="@dimen/padding_five"
+                                android:layout_marginEnd="@dimen/margin_ten" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:padding="@dimen/padding_five"
+                            android:background="@mipmap/icon_edittext"
+                            android:orientation="horizontal"
+                            android:weightSum="5"
+                            android:layout_marginTop="@dimen/margin_fifteen"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:layout_marginRight="@dimen/margin_twenty">
+
+                            <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                                android:id="@+id/et_new_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:inputType="textPassword"
+                                android:hint="New Password"
+                                android:layout_weight="0.8"
+                                android:imeOptions="actionNext"
+                                android:ems="10"
+                                android:textSize="@dimen/text"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/text_grey"
+                                android:paddingLeft="@dimen/padding_ten"
+                                android:paddingRight="@dimen/padding_ten" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4.2"
+                                android:layout_marginRight="@dimen/margin_ten"
+                                android:contentDescription="@null"
+                                android:src="@mipmap/icon_password"
+                                android:padding="@dimen/padding_five"
+                                android:layout_marginEnd="@dimen/margin_ten" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:padding="@dimen/padding_five"
+                            android:background="@mipmap/icon_edittext"
+                            android:orientation="horizontal"
+                            android:weightSum="5"
+                            android:layout_marginTop="@dimen/margin_fifteen"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:layout_marginRight="@dimen/margin_twenty">
+
+                            <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                                android:id="@+id/et_reenter_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:inputType="textPassword"
+                                android:hint="Reenter Password"
+                                android:layout_weight="0.8"
+                                android:imeOptions="actionDone"
+                                android:ems="10"
+                                android:textSize="@dimen/text"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/text_grey"
+                                android:paddingLeft="@dimen/padding_ten"
+                                android:paddingRight="@dimen/padding_ten" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4.2"
+                                android:layout_marginRight="@dimen/margin_ten"
+                                android:contentDescription="@null"
+                                android:src="@mipmap/icon_password"
+                                android:padding="@dimen/padding_five"
+                                android:layout_marginEnd="@dimen/margin_ten" />
+
+                        </LinearLayout>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:id="@+id/tv_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="@dimen/margin_twenty"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:layout_marginRight="@dimen/margin_twenty"
+                            android:text="UPDATE PASSWORD"
+                            android:background="@drawable/background_sign_up"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

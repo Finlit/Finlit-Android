@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relCoverFlow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/linMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:layout_marginRight="@dimen/margin_twenty"
+            android:weightSum="10"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@mipmap/default_user_square"
+                android:scaleType="centerCrop"
+                android:id="@+id/iv_profile"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.app.finlit.utils.views.TextViewCalibri
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_name"
+                    android:textSize="@dimen/text_heading"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#867E7E"
+                    android:gravity="center"
+                    android:id="@+id/tv_about"
+                    android:textSize="@dimen/text_small"
+                    android:layout_marginBottom="@dimen/margin_five"
+                    android:paddingLeft="@dimen/padding_twenty"
+                    android:paddingRight="@dimen/padding_twenty"
+                />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/dashed_line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/iv_result"
+                    android:paddingLeft="@dimen/padding_twenty"
+                    android:paddingRight="@dimen/padding_twenty"
+                    android:weightSum="3"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:padding="@dimen/padding_five"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/icon_moneybag"/>
+
+                        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|start"
+                            android:maxLines="3"
+                            android:id="@+id/tv_question"
+                            android:ellipsize="end"
+                            android:textColor="@color/black_light"
+                            android:textSize="@dimen/text_small"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/padding_five"
+                            android:src="@mipmap/icon_clock" />
+
+                        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="24 - 26 years"
+                            android:gravity="center|start"
+                            android:maxLines="1"
+                            android:id="@+id/tv_age"
+                            android:ellipsize="end"
+                            android:textColor="@color/black_light"
+                            android:textSize="@dimen/text_small"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="@dimen/margin_ten"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/padding_five"
+                            android:src="@mipmap/icon_pinpoint"/>
+
+                        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|start"
+                            android:maxLines="2"
+                            android:id="@+id/tv_location"
+                            android:ellipsize="end"
+                            android:textColor="@color/black_light"
+                            android:textSize="@dimen/text_small"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="end"
+                    android:id="@+id/iv_result"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/result_novice"
+                    android:layout_marginEnd="@dimen/margin_ten"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

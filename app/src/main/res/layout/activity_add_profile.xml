@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.authenticate.AddProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/lay_add_profile_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:id="@+id/lay_add_profile_top"
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/iv_add_profile_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/logo_profile" />
+
+                <ImageView
+                    android:id="@+id/iv_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@color/mask"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/toolbar_add_profile"
+                    layout="@layout/toolbar" />
+
+
+                <com.app.finlit.utils.views.EditTextCalibri
+                    android:id="@+id/et_name1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar_add_profile"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:background="@color/transparent"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Let's Know You"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="@dimen/text_big"
+                    android:theme="@style/TextLabel"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/view_lets"
+                    android:layout_width="180dp"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/et_name1"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_five"
+                    android:background="@color/white"
+                    android:visibility="gone" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/txt_add_profile_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_lets"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_five"
+                    android:text="What's your name ?"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text"
+                    android:visibility="gone" />
+
+
+                <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                    android:id="@+id/et_about_you_1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_add_profile_help"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_forty"
+                    android:background="@color/transparent"
+                    android:focusable="false"
+                    android:hint="About You"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:maxLines="2"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/text_sub"
+                    android:visibility="gone" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/background_profile_image">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_add_profile_dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/padding_three"
+                    android:src="@mipmap/icon_camera" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_add_profile_below"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lay_add_profile_top"
+                android:layout_marginTop="@dimen/margin_thirty"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_twenty">
+
+                <LinearLayout
+                    android:id="@+id/linear_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:background="@mipmap/icon_edittext"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_five"
+                    android:weightSum="5">
+
+                    <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzÁáÂâÃãÀàÇçÉéÊêÍíÓóÔôÕõÚú "
+                        android:ems="10"
+                        android:hint="Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textNoSuggestions|textCapSentences|textPersonName"
+                        android:paddingLeft="@dimen/padding_ten"
+                        android:paddingRight="@dimen/padding_ten"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/text_grey"
+                        android:textSize="@dimen/text" />
+
+                    <ImageView
+                        android:id="@+id/iv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_weight="4.2"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/padding_ten"
+                        android:src="@mipmap/icon_username" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_add_profile_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/lay_add_profile_gender"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:background="@mipmap/icon_edittext"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_five"
+                    android:weightSum="5">
+
+                    <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                        android:id="@+id/et_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/iv_add_profile_age"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Age"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/padding_ten"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_profile_age"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:contentDescription="@null"
+                        android:padding="11dp"
+                        android:src="@mipmap/icon_agegroup" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_add_profile_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:background="@mipmap/icon_edittext"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <Spinner
+                        android:id="@+id/spinner_add_profile_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:dropDownWidth="match_parent"
+                        android:dropDownVerticalOffset="37dp"
+                        android:hint="@string/gender"
+                        android:paddingLeft="@dimen/padding_ten"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/text_grey"
+                        android:textSize="@dimen/text" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_profile_gender"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:contentDescription="@null"
+                        android:padding="9dp"
+                        android:src="@mipmap/icon_gender" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_add_profile_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/lay_add_profile_age"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:background="@mipmap/icon_edittext"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_five"
+                    android:weightSum="5">
+
+                    <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                        android:id="@+id/et_add_profile_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/iv_add_profile_location"
+                        android:background="@color/white"
+                        android:hint="@string/location"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="@dimen/padding_ten"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_profile_location"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/padding_ten"
+                        android:src="@mipmap/icon_location" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_interest"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:background="@mipmap/icon_edittext"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_five"
+                    android:weightSum="5">
+
+                    <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                        android:id="@+id/et_interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/iv_interest"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Select Interests"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/padding_ten"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text" />
+
+                    <ImageView
+                        android:id="@+id/iv_interest"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:contentDescription="@null"
+                        android:padding="11dp"
+                        android:src="@mipmap/icon_agegroup" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_name"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:background="@mipmap/icon_edittext"
+                    android:minHeight="75dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_seven"
+                    android:weightSum="5">
+
+                    <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                        android:id="@+id/et_about_you"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:hint="About You"
+                        android:inputType="textMultiLine|textCapSentences|textNoSuggestions"
+                        android:lines="4"
+                        android:minHeight="55dp"
+                        android:minLines="1"
+                        android:paddingLeft="@dimen/padding_fifteen"
+                        android:paddingRight="@dimen/padding_fifteen"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/text_grey"
+                        android:textSize="@dimen/text" />
+
+                    <ImageView
+                        android:id="@+id/iv_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_weight="4.2"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/padding_eight"
+                        android:src="@mipmap/icon_about" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_add_profile_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lay_add_profile_location"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:background="@mipmap/icon_edittext"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_five"
+                    android:weightSum="5">
+
+                    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                        android:id="@+id/txt_add_profile_options"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/iv_add_profile_email"
+                        android:gravity="center_vertical"
+                        android:hint="What are doing in your financial life?"
+                        android:imeOptions="actionNext"
+                        android:minHeight="75dp"
+                        android:paddingLeft="@dimen/margin_ten"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/text_grey"
+                        android:textSize="@dimen/text_small" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_profile_email"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_weight="4.2"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/padding_ten"
+                        android:src="@mipmap/icon_downarrow" />
+
+                </RelativeLayout>
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/lay_add_profile_username"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="55dp"-->
+                <!--android:layout_marginLeft="@dimen/margin_twenty_five"-->
+                <!--android:layout_marginRight="@dimen/margin_twenty_five"-->
+                <!--android:layout_marginTop="@dimen/margin_twenty"-->
+                <!--android:background="@mipmap/icon_edittext"-->
+                <!--android:padding="@dimen/padding_five"-->
+                <!--android:layout_below="@id/lay_add_profile_email"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="5">-->
+
+                <!--<com.app.finlit.utils.views.EditTextEuphemiaRegular-->
+                <!--android:id="@+id/et_add_profile_username"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/white"-->
+                <!--android:ems="10"-->
+                <!--android:layout_weight="0.8"-->
+                <!--android:hint="@string/username"-->
+                <!--android:imeOptions="actionNext"-->
+                <!--android:inputType="textNoSuggestions"-->
+                <!--android:paddingLeft="@dimen/padding_ten"-->
+                <!--android:paddingRight="@dimen/padding_ten"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textColorHint="@color/text_grey"-->
+                <!--android:textSize="@dimen/text" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_add_profile_password"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="4.2"-->
+                <!--android:layout_marginRight="@dimen/margin_ten"-->
+                <!--android:contentDescription="@null"-->
+                <!--android:padding="@dimen/padding_ten"-->
+                <!--android:src="@mipmap/icon_username"-->
+                <!--android:layout_marginEnd="@dimen/margin_ten" />-->
+
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/lay_add_profile_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:background="@mipmap/icon_edittext"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_five"
+                    android:weightSum="5">
+
+                    <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                        android:id="@+id/et_add_profile_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="@string/password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:paddingLeft="@dimen/padding_ten"
+                        android:paddingRight="@dimen/padding_ten"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/text_grey"
+                        android:textSize="@dimen/text" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_profile_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_weight="4.2"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/padding_eight"
+                        android:src="@mipmap/icon_password" />
+
+                </LinearLayout>
+
+
+                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                    android:id="@+id/txt_add_profile_proceed"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin_twenty_five"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty_five"
+                    android:background="@drawable/background_sign_up"
+                    android:gravity="center"
+                    android:text="@string/proceed"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_sub" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

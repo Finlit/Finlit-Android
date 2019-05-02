@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--android:background="@color/background_card"-->
+    <!--tools:context="com.app.finlit.ui.findmatch.FindMatchActivity">-->
+
+    <!--<include layout="@layout/toolbar_filter"/>-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:background="#0198DC"/>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/toolbar_head">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_margin="@dimen/margin_twenty"-->
+            <!--&gt;-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_toLeftOf="@+id/tv_search"-->
+                <!--android:background="@mipmap/icon_edittext"-->
+                <!--android:padding="@dimen/padding_five"-->
+                <!--android:layout_marginRight="@dimen/margin_five">-->
+
+                <!--<com.app.finlit.utils.views.EditTextEuphemiaRegular-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:paddingLeft="@dimen/padding_twenty"-->
+                    <!--android:paddingRight="@dimen/padding_twenty"-->
+                    <!--android:textSize="@dimen/text"-->
+                    <!--android:id="@+id/et_search"-->
+                    <!--android:textCursorDrawable="@null"-->
+                    <!--android:hint="Search here"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:imeOptions="actionSearch"-->
+                    <!--android:inputType="textCapSentences"-->
+                    <!--android:background="@color/transparent"-->
+                    <!--android:textColorHint="@color/hint_color"-->
+                    <!--android:textColor="@color/text_color" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:padding="@dimen/padding_five"-->
+                    <!--android:layout_marginRight="@dimen/margin_ten"-->
+                    <!--android:src="@mipmap/icon_search"/>-->
+
+
+            <!--</RelativeLayout>-->
+
+            <!--<com.app.finlit.utils.views.TextViewSegoeSemiBold-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="SEARCH"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:gravity="center"-->
+                <!--android:id="@+id/tv_search"-->
+                <!--android:layout_alignParentRight="true"/>-->
+
+        <!--</RelativeLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/swipeRefreshLayout"-->
+        <!--android:padding="@dimen/margin_five">-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/recycler_view"-->
+            <!--android:layout_marginBottom="@dimen/margin_ten"/>-->
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+<!--</LinearLayout>-->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:focusable="true"
+android:focusableInTouchMode="true"
+android:background="@mipmap/background_blue"
+tools:context="com.app.finlit.ui.findmatch.FindMatchActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+        android:visibility="gone"
+    android:background="#0198DC"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.yuyakaido.android.cardstackview.CardStackView
+            android:id="@+id/card_stack_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_heading"
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:layout_marginBottom="@dimen/margin_twenty"
+            android:layout_above="@id/linear_bottom"/>
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/linear_bottom"
+            android:layout_marginBottom="@dimen/margin_twenty"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/padding_twenty"
+                android:paddingRight="@dimen/padding_twenty"
+                android:paddingStart="@dimen/padding_twenty"
+                android:paddingEnd="@dimen/padding_ten">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_next"
+                    android:background="@drawable/background_curousel_next"
+                    android:text="@string/next"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/padding_twenty"
+                android:paddingRight="@dimen/padding_twenty">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_message"
+                    android:background="@drawable/background_curousel_message"
+                    android:text="Message"
+                    android:gravity="center"
+                    android:textSize="@dimen/text"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

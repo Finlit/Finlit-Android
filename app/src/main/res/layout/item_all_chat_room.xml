@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_five">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/background_chat"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:layout_marginLeft="@dimen/margin_ten">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/linear_time"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Room 156"
+                    android:id="@+id/tv_name"
+                    android:textSize="@dimen/text_heading"
+                    android:textColor="#3D3D3D"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_small"
+                    android:text=""/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:id="@+id/linear_time"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:orientation="vertical">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 hour ago"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/text_grey"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

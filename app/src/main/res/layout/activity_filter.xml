@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.app.finlit.ui.nearby.FilterActivity">
+
+    <include layout="@layout/toolbar_filter" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/margin_twenty"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/margin_five"
+                    android:layout_toLeftOf="@+id/tv_search"
+                    android:background="@mipmap/icon_edittext"
+                    android:padding="@dimen/padding_five">
+
+                    <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                        android:id="@+id/et_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:hint="Search here"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapSentences"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/padding_twenty"
+                        android:paddingRight="@dimen/padding_twenty"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/hint_color"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/text" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:padding="@dimen/padding_five"
+                        android:src="@mipmap/icon_search" />
+
+
+                </RelativeLayout>
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="SEARCH"
+                    android:textColor="@color/black_light" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"
+                android:visibility="gone" />
+
+            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:text="Filter By"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_five"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:orientation="horizontal">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_selected_filter"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="All"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_real_estate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:background="@drawable/background_unselected_filter"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Real Estate"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_retirement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:background="@drawable/background_unselected_filter"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Retirements"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_small" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:orientation="horizontal">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_crunccing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_unselected_filter"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="CC Cruncching"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_budget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:background="@drawable/background_unselected_filter"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Budget Planning"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_small" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:orientation="horizontal">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_personal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_unselected_filter"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Personal Investment"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_cryptocurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:background="@drawable/background_unselected_filter"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Crptocurrency"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text_small" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:background="@color/color_divid" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty">
+
+                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone">
+
+                    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="0"
+                        android:textColor="@color/pink"
+                        android:textSize="@dimen/text" />
+
+                    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" - "
+                        android:textColor="@color/pink"
+                        android:textSize="@dimen/text" />
+
+                    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="@color/pink"
+                        android:textSize="@dimen/text" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <io.apptik.widget.MultiSlider
+                android:id="@+id/seekbar_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:thumb="@drawable/thumb_image"
+                app:drawThumbsApart="false"
+                app:range1Color="@android:color/holo_orange_dark"
+                app:rangeColor="@color/toolbar_head"
+                app:thumbNumber="2"
+                app:trackColor="@android:color/holo_orange_dark" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/minValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/maxValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:text="100"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <!--<io.apptik.widget.MultiSlider-->
+            <!--android:id="@+id/seekbar_age"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:track="@drawable/example_scrubber_secondary_holo"-->
+            <!--app:drawThumbsApart="false"-->
+            <!--app:range1="@drawable/example_scrubber_secondary_holo"-->
+            <!--app:range1Color="@android:color/holo_orange_dark"-->
+            <!--app:rangeColor="@color/toolbar_head"-->
+            <!--app:thumbColor="@color/pink"-->
+            <!--app:thumbNumber="2"-->
+            <!--app:trackColor="@android:color/holo_orange_dark"-->
+            <!--android:layout_marginLeft="@dimen/margin_twenty"-->
+            <!--android:layout_marginRight="@dimen/margin_twenty"/>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:background="@color/color_divid" />
+
+            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:text="Location"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text" />
+
+            <RelativeLayout
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_five"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:background="@mipmap/icon_edittext"
+                android:padding="@dimen/padding_five">
+
+                <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                    android:id="@+id/et_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/iv_location"
+                    android:background="@color/transparent"
+                    android:hint="Address"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/padding_ten"
+                    android:paddingRight="@dimen/padding_ten"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/hint_color"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text" />
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:padding="@dimen/padding_five"
+                    android:src="@mipmap/icon_location" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty">
+
+                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Range"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="0 "
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/text_sub" />
+
+            </RelativeLayout>
+
+            <!--<io.apptik.widget.MultiSlider-->
+            <!--android:id="@+id/seekbar_range"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:thumb="@drawable/background_dot_header"-->
+            <!--android:track="@drawable/example_scrubber_secondary_holo"-->
+            <!--app:range="@drawable/example_scrubber_primary_holo"-->
+            <!--app:thumbNumber="1"-->
+            <!--app:trackColor="#C8CCE4"-->
+            <!--android:layout_marginLeft="@dimen/margin_ten"-->
+            <!--android:layout_marginRight="@dimen/margin_ten"-->
+            <!--/>-->
+
+            <io.apptik.widget.MultiSlider
+                android:id="@+id/seekbar_range"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:thumb="@drawable/thumb_image"
+                app:drawThumbsApart="false"
+                app:range1Color="#E4CAE8"
+                app:rangeColor="@color/toolbar_head"
+                app:thumbNumber="1"
+                app:trackColor="@android:color/holo_orange_dark" />
+
+            <!--<SeekBar-->
+            <!--android:id="@+id/simpleProgressBar"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="12dp"-->
+            <!--android:max="100"-->
+            <!--android:progress="0"-->
+            <!--android:background="@null"-->
+            <!--android:shape="oval"-->
+            <!--android:layout_marginTop="@dimen/margin_ten"-->
+            <!--android:layout_marginBottom="@dimen/margin_ten"-->
+            <!--android:layout_marginLeft="@dimen/padding_twenty"-->
+            <!--android:layout_marginRight="@dimen/padding_twenty"-->
+            <!--android:progressDrawable="@drawable/background_dot_seekbar"-->
+            <!--android:secondaryProgress="0"-->
+            <!--android:thumb="@drawable/thumb_image" />-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:text="5,000 miles"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:background="@color/color_divid" />
+
+            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                android:id="@+id/tv_apply"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="@dimen/margin_thirty"
+                android:layout_marginTop="@dimen/margin_fifteen"
+                android:layout_marginRight="@dimen/margin_thirty"
+                android:layout_marginBottom="@dimen/margin_twenty"
+                android:background="@drawable/background_sign_up"
+                android:gravity="center"
+                android:text="APPLY NOW"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_ten">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_second"
+        android:visibility="gone"
+        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/iv_profile_2"
+            android:src="@mipmap/default_user"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/icon_chatwhite">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_text_2"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_ten"
+                android:text="hiii this is manish kumar how are you tell me somethig about you"/>
+
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 hou ago"
+                android:textSize="@dimen/text_small"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_text_2"
+                android:id="@+id/tv_time2"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:layout_marginBottom="@dimen/margin_ten"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_first"
+        android:visibility="gone"
+        android:layout_marginRight="60dp"
+        android:layout_marginEnd="60dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/iv_profile"
+            android:src="@mipmap/default_user"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/icon_chatcoloured_2">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_text"
+                android:textColor="@color/black"
+                android:padding="@dimen/padding_ten"
+                android:text="hiii this is manish kumar how are you tell me somethig about you"/>
+
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 hou ago"
+                android:textSize="@dimen/text_small"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_text"
+                android:id="@+id/tv_time"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:layout_marginBottom="@dimen/margin_ten"
+                android:textColor="#B5B5B5"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

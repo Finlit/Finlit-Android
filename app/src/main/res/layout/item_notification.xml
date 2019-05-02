@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_ten">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_ten"
+        android:background="@drawable/background_chat">
+        
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:padding="@dimen/margin_ten"
+            android:src="@mipmap/default_user"
+            android:id="@+id/iv_profile" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLines="2"
+                    android:gravity="start"
+                    android:textAlignment="textStart"
+                    android:id="@+id/tv_title"
+                    android:text=""
+                    android:textSize="@dimen/text"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/margin_five"
+                    android:layout_marginRight="@dimen/margin_five"
+                    android:layout_marginTop="@dimen/margin_five"
+                    android:layout_toLeftOf="@id/tv_time"
+                    android:layout_toStartOf="@id/tv_time" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_time"
+                    android:gravity="end"
+                    android:textAlignment="textEnd"
+                    android:textSize="@dimen/text_small"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ten" />
+
+            </RelativeLayout>
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Messaging Now"
+                android:paddingLeft="@dimen/padding_five"
+                android:paddingRight="@dimen/padding_ten"
+                android:id="@+id/tv_desc"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/padding_five"
+                android:textColor="#324D60"
+                android:paddingStart="@dimen/padding_five"
+                android:paddingEnd="@dimen/padding_ten" />
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#097FB9</color>
+    <color name="colorPrimaryDark">#097FB9</color>
+    <color name="colorAccent">#097FB9</color>
+
+    <color name="app_color">#1D6181</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_light">#FCFEFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="toolbar_head">#009BDF</color>
+    <color name="mask">#a7000000</color>
+
+    <color name="black">#000000</color>
+    <color name="black_light">#5A5A5A</color>
+    <color name="color_divid">#58636363</color>
+    <color name="text_grey">#B6B6B6</color>
+
+    <color name="pink">#E94F9A</color>
+    <color name="light_pink">#F284A9</color>
+    <color name="hint_color">#B0B0B0</color>
+    <color name="text_blue">#36518B</color>
+    <color name="text_color">#2b2a2b</color>
+    <color name="home_line">#EBEBEB</color>
+    <color name="background_card">#F7F7F6</color>
+    <color name="yellow">#F7971E</color>
+</resources>

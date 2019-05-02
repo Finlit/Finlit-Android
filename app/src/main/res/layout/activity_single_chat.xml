@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:id="@+id/container"
+    tools:context="com.app.finlit.ui.chat.SingleChatActivity">
+
+    <include layout="@layout/toolbar_options"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recycler_view"
+        android:padding="@dimen/padding_ten"
+        android:layout_weight="1">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/color_divid"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F7F7F7"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:padding="@dimen/padding_five"
+        android:baselineAligned="false"
+        android:id="@+id/linear_below"
+        android:weightSum="3">
+
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:src="@mipmap/icon_plus"-->
+            <!--android:id="@+id/iv_add_attachment"-->
+            <!--android:paddingTop="@dimen/padding_fifteen"-->
+            <!--android:paddingBottom="@dimen/padding_fifteen" />-->
+
+        <com.app.finlit.utils.views.EditTextEuphemiaRegular
+            android:id="@+id/et_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginTop="@dimen/margin_five"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="@dimen/margin_five"
+            android:layout_toLeftOf="@id/iv_send"
+            android:layout_toRightOf="@id/iv_add_attachment"
+            android:background="@drawable/background_edittext_send"
+            android:hint="@string/type_message"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine|textCapSentences|textNoSuggestions"
+            android:lines="4"
+            android:minLines="1"
+            android:padding="@dimen/padding_ten"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="50dp"
+            android:src="@mipmap/icon_send"
+            android:padding="@dimen/padding_fifteen"
+            android:id="@+id/iv_send"/>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding_five"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/padding_three"
+    app:ignore="NamespaceTypo"
+    card_view:cardCornerRadius="7dp"
+    card_view:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_five"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.app.finlit.utils.views.RoundedImageView
+                android:id="@+id/iv_ivprofile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_user_square" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_weight="1"
+                android:gravity="start|center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:gravity="start"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text" />
+
+                    <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                        android:id="@+id/tv_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:gravity="start"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text" />
+                </LinearLayout>
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:id="@+id/tv_proffesion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ll"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Real Esatate"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/text_small" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="dddddd"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_small"
+                    android:ellipsize="marquee"
+                    android:layout_marginBottom="@dimen/margin_ten"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:freezesText="true"
+                    android:gravity="bottom"
+                    android:id="@+id/available_location"/>
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+        <ProgressBar
+            android:id="@+id/show_progress2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+        <com.app.finlit.utils.views.RoundedImageView
+            android:id="@+id/iv_profileavailable"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/margin_five"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_user_square" />
+        </RelativeLayout>
+
+        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_five"
+            android:text="Hey There looking for a date"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text" />
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:layout_marginTop="@dimen/margin_five"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@mipmap/icon_location"/>-->
+
+        <!--<com.app.finlit.utils.views.TextViewEuphemiaRegular-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="Suggest a place"-->
+        <!--android:gravity="center|start"-->
+        <!--android:maxLines="1"-->
+        <!--android:id="@+id/tv_location"-->
+        <!--android:ellipsize="end"-->
+        <!--android:textColor="@color/black_light"-->
+        <!--android:paddingLeft="@dimen/padding_ten"-->
+        <!--android:textSize="@dimen/text_small"/>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@mipmap/icon_clock"/>-->
+
+        <!--<com.app.finlit.utils.views.TextViewEuphemiaRegular-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="Suggest a time"-->
+        <!--android:gravity="center|start"-->
+        <!--android:maxLines="1"-->
+        <!--android:id="@+id/tv_question"-->
+        <!--android:ellipsize="end"-->
+        <!--android:textColor="@color/black_light"-->
+        <!--android:paddingLeft="@dimen/padding_ten"-->
+        <!--android:textSize="@dimen/text_small"/>-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_ten"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/rl_confirm"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_five"
+                android:layout_weight="1"
+                android:background="@drawable/background_confirm_date">
+
+                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                    android:id="@+id/tv_intrested"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="I am Interested"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="@dimen/margin_five"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_view_profile">
+
+                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                    android:id="@+id/tv_nothanks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="No Thanks"
+                    android:textColor="#31AAFF" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

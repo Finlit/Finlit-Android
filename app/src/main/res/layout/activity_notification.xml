@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_card"
+    tools:context=".ui.notification.NotificationActivity">
+
+    <include layout="@layout/toolbar_filter"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_ten"
+            android:id="@+id/recyclerView" />
+
+        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_no_notification"
+            android:text="You do not have any notifications."
+            android:textColor="@color/text_color"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/text"
+            android:visibility="gone"
+            android:gravity="center"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

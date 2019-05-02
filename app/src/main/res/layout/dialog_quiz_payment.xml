@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_twenty"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/lay_dailog_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/toolbar_head">
+
+        <com.app.finlit.utils.views.TextViewEuphemiaBold
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_heading"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="@string/pay_for_quiz"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_description"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/lay_dailog_title">
+
+        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_thirty"
+            android:text="@string/you_need_to_pay_5_for_taking_finlit_quiz_again"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_dailog_pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/margin_five"
+        android:layout_marginRight="@dimen/margin_five"
+        android:layout_below="@+id/lay_description">
+
+        <com.app.finlit.utils.views.TextViewEuphemiaBold
+            android:id="@+id/txt_dialog_payment_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_heading"
+            android:textColor="@color/black"
+            android:background="@drawable/background_edittext"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cancel"/>
+
+        <com.app.finlit.utils.views.TextViewEuphemiaBold
+            android:id="@+id/txt_dialog_payment_now"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_heading"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_five"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/background_blue_message"
+            android:text="@string/pay_now"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

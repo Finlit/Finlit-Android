@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_item_questions_ans"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:src="@mipmap/icon_tick"
+            android:padding="@dimen/padding_fifteen"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:layout_marginStart="@dimen/margin_twenty" />
+
+        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+            android:id="@+id/txt_item_questions_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"/>
+
+    </LinearLayout>
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+       android:layout_marginTop="@dimen/margin_three"
+       android:id="@+id/view"
+       android:background="@color/color_divid"/>
+
+</LinearLayout>

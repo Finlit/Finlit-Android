@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbar"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_left"
+            android:padding="@dimen/padding_seven"
+            android:src="@mipmap/icon_information"
+            android:contentDescription="@null" />
+
+        <com.app.finlit.utils.views.TextViewEuphemiaBold
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:paddingLeft="@dimen/padding_five"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_heading" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_right_2"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:padding="@dimen/padding_seven"
+            android:src="@mipmap/icon_notification"
+            android:layout_gravity="end"
+            android:contentDescription="@null"
+            android:layout_marginEnd="@dimen/margin_ten" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_right"
+            android:padding="@dimen/padding_seven"
+            android:visibility="gone"
+            android:src="@mipmap/icon_information"
+            android:layout_gravity="end"
+            android:contentDescription="@null" />
+
+    </android.support.v7.widget.Toolbar>
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.finlit.ui.settings.SupportActivity">
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:clickable="true"-->
+            <!--android:id="@+id/lay_sign_in_main">-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/lay_sign_in_top"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="300dp"-->
+                <!--android:background="@color/colorPrimaryDark">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_sign_in_back"-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:src="@mipmap/icon_back"-->
+                    <!--android:padding="@dimen/padding_seven"-->
+                    <!--android:layout_marginLeft="@dimen/margin_ten"-->
+                    <!--android:layout_marginTop="@dimen/margin_twenty"-->
+                    <!--android:layout_marginStart="@dimen/margin_ten"-->
+                    <!--android:contentDescription="@null" />-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_sign_in_logo"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="100dp"-->
+                    <!--android:src="@mipmap/sign_up_logo"-->
+                    <!--android:padding="@dimen/padding_five"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginLeft="@dimen/margin_ten"-->
+                    <!--android:layout_marginTop="@dimen/margin_fifteen"-->
+                    <!--android:layout_marginStart="@dimen/margin_ten"-->
+                    <!--android:contentDescription="@null" />-->
+
+                <!--<com.app.finlit.utils.views.TextViewEuphemiaBold-->
+                    <!--android:id="@+id/txt_sign_in_signin"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="@dimen/text_heading"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:text="SUPPORT"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_below="@id/iv_sign_in_logo"-->
+                    <!--android:layout_marginTop="@dimen/margin_ten"/>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/lay_sign_in_card"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="-120dp"-->
+                <!--android:layout_below="@+id/lay_sign_in_top">-->
+
+                <!--<View-->
+                    <!--android:id="@+id/view_card"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="3dp"-->
+                    <!--android:layout_marginLeft="@dimen/margin_forty"-->
+                    <!--android:layout_marginRight="@dimen/margin_forty"-->
+                    <!--android:background="@color/pink"/>-->
+
+                <!--<android.support.v7.widget.CardView-->
+                    <!--android:id="@+id/card_view_sign_in"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="320dp"-->
+                    <!--android:layout_below="@id/view_card"-->
+                    <!--android:layout_marginLeft="@dimen/margin_twenty_five"-->
+                    <!--android:layout_marginRight="@dimen/margin_twenty_five"-->
+                    <!--android:layout_marginBottom="@dimen/margin_five"-->
+                    <!--app:elevation="@dimen/margin_seven">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="vertical">-->
+
+
+                        <!--<com.app.finlit.utils.views.TextViewSegoeSemiBold-->
+                            <!--android:id="@+id/tv_update"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginTop="@dimen/margin_twenty"-->
+                            <!--android:layout_marginBottom="@dimen/margin_twenty"-->
+                            <!--android:layout_marginLeft="@dimen/margin_twenty"-->
+                            <!--android:layout_marginRight="@dimen/margin_twenty"-->
+                            <!--android:text="nm ccnb ccnbvdjvbjhvxvmnvmncvnmvnmvmnvmnnmvcvnmbvnmbnmvnmcbvnmcbvnmbcvncnvbnvbnbxvxbvnbvxccvcnvbnbvnmxbvnmcbxxmvnvncxvncxvbncbvnbcnvbvmxbnvnmcbvnmbcxvnmcbvnmcbvnmcbvmncbvncbnbvn cmn cmn cmnz mn "-->
+                            <!--android:gravity="center"-->
+                            <!--android:textColor="@color/black"-->
+                            <!--android:textSize="@dimen/text" />-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</android.support.v7.widget.CardView>-->
+
+            <!--</RelativeLayout>-->
+
+
+        <!--</RelativeLayout>-->
+
+    <!--</ScrollView>-->
+    <include
+        layout="@layout/toolbar_filter"
+        android:id="@+id/yy"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/yy"
+        android:layout_marginStart="@dimen/margin_five"
+        android:layout_marginEnd="@dimen/margin_five"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/lay_sign_in_main">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="match_parent"
+                android:id="@+id/tv_support"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

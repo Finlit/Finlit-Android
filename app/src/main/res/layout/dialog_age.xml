@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/margin_twenty">
+
+    <NumberPicker
+        android:id="@+id/numberPicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/numberPicker1" >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/button1"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:text="Cancel"
+            android:layout_marginStart="@dimen/margin_twenty" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Set"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/toolbar_head"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:background="@color/toolbar_head"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_five"
+            android:id="@+id/iv_left"
+            android:src="@mipmap/icon_back"
+            android:padding="@dimen/padding_seven"
+            android:contentDescription="@null" />
+
+        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_heading" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_right"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:src="@mipmap/icon_filter_white"
+            android:padding="@dimen/padding_seven"
+            android:contentDescription="@null" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+</LinearLayout>

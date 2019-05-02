@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.MainActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/tv_share">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:background="@mipmap/home_background"
+                android:orientation="vertical">
+
+                <include layout="@layout/toolbar_home" />
+
+                <ImageView
+                    android:id="@+id/iv_sign_up_logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/sign_up_logo"
+                    android:padding="@dimen/padding_five"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_fifteen"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:contentDescription="@null" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_big"
+                    android:textColor="@color/white"
+                    android:text="FINLIT"
+                    android:paddingLeft="@dimen/padding_ten"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:weightSum="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+                    android:layout_margin="@dimen/margin_ten"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/linear_find_match"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/icon_find_match"/>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DATES"
+                            android:textSize="@dimen/text"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/home_line"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:layout_marginBottom="@dimen/margin_ten"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/linear_message"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/icon_mycircle"/>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="PENDING DATES"
+                            android:textSize="@dimen/text"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/home_line"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:layout_marginBottom="@dimen/margin_ten"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/my_blog"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/icon_favourite"/>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MY BLOGS"
+                            android:textSize="@dimen/text"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:background="@color/home_line"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:background="@color/home_line"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:background="@color/home_line"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+                    android:layout_margin="@dimen/margin_ten"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/linear_near_by"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/icon_near_by"/>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NEAR BY"
+                            android:textSize="@dimen/text"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/home_line"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:layout_marginBottom="@dimen/margin_ten"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/linear_chat_room"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/icon_noti"/>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="NOTIFICATIONS"
+                            android:gravity="center"
+                            android:textSize="@dimen/text"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/home_line"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:layout_marginBottom="@dimen/margin_ten"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/linear_my_circle"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/icon_message"/>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MESSAGES"
+                            android:textSize="@dimen/text"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:background="@color/home_line"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:background="@color/home_line"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:background="@color/home_line"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+                    android:layout_margin="@dimen/margin_ten"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/linear_subscription"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/icon_subsriptions"/>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="SUBSCRIPTIONS"
+                            android:textSize="@dimen/text"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/home_line"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:layout_marginBottom="@dimen/margin_ten"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/linear_my_profile"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/icon_myprofile"/>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MY PROFILE"
+                            android:textSize="@dimen/text"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/home_line"
+                        android:layout_marginTop="@dimen/margin_ten"
+                        android:layout_marginBottom="@dimen/margin_ten"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/linear_setting"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/icon_setting"/>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SETTINGS"
+                            android:textSize="@dimen/text"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/love_it_share_now"
+                android:gravity="center"
+                android:id="@+id/tv_share"
+                android:layout_above="@id/view_bottom"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/text"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:layout_marginBottom="@dimen/margin_five"
+                android:id="@+id/view_bottom"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true" />
+
+
+
+</RelativeLayout>

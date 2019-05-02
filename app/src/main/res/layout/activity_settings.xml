@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.settings.SettingsActivity">
+
+    <include layout="@layout/toolbar_filter" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Notification"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <Switch
+                        android:id="@+id/switch_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:theme="@style/SmartSwitch"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Sound"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <Switch
+                        android:id="@+id/switch_sound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:theme="@style/SmartSwitch"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Find me a Date"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <Switch
+                        android:id="@+id/switch_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:theme="@style/SmartSwitch"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="@color/color_divid"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:id="@+id/rel_take_quiz"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Take Quiz"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="@dimen/padding_three"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:src="@mipmap/icon_right_arrow"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:id="@+id/rel_select_matchtype"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Select Match Type "/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <Spinner
+                        android:id="@+id/spinner_settings_matchtype"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        android:dropDownVerticalOffset="40dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/text_grey"
+                        android:textSize="@dimen/text"/>
+
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:id="@+id/rel_change_password"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Change Password"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="@dimen/padding_three"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:src="@mipmap/icon_right_arrow"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:id="@+id/rel_Blocked_users"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Blocked Users"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="@dimen/padding_three"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:src="@mipmap/icon_right_arrow"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:id="@+id/terms"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Terms &amp; Conditions"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="@dimen/padding_three"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:src="@mipmap/icon_right_arrow"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:id="@+id/support"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Support"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="@dimen/padding_three"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:src="@mipmap/icon_right_arrow"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:id="@+id/privacy"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Privacy"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="@dimen/padding_three"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:src="@mipmap/icon_right_arrow"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/rel_logout"
+                android:paddingLeft="@dimen/padding_fifteen"
+                android:layout_margin="@dimen/margin_ten"
+                android:paddingStart="@dimen/padding_fifteen">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Logout"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="@dimen/padding_three"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:src="@mipmap/icon_right_arrow"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_divid"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_card"
+    android:orientation="vertical"
+    tools:context="com.app.finlit.ui.dates.FilterDatingActivity">
+
+    <include layout="@layout/toolbar_filter_tick"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_divid"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginLeft="@dimen/margin_twenty"
+        android:layout_marginRight="@dimen/margin_twenty">
+
+        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age Range"
+            android:textSize="@dimen/text"
+            android:textColor="@color/black"/>
+
+        <io.apptik.widget.MultiSlider
+            android:id="@+id/seekbar_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:drawThumbsApart="false"
+            app:range1Color="@android:color/holo_orange_dark"
+            app:rangeColor="@color/toolbar_head"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:thumb="@drawable/thumb_image"
+            app:thumbNumber="2"
+            app:trackColor="@android:color/holo_orange_dark" />
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_twenty"
+        android:layout_marginRight="@dimen/margin_twenty">
+
+        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+            android:id="@+id/minValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="0" />
+
+        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+            android:id="@+id/maxValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="100"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_ten"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_twenty"
+        android:background="@color/color_divid"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_twenty"
+        android:layout_marginLeft="@dimen/margin_twenty">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_twenty"
+           >
+
+            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Range"
+                android:textSize="@dimen/text"
+                android:textColor="@color/text_color" />
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_sub"
+                android:id="@+id/tv_range"
+                android:text="0 "
+                android:layout_alignParentRight="true"
+                android:textColor="@color/pink"/>
+
+        </RelativeLayout>
+        <io.apptik.widget.MultiSlider
+            android:id="@+id/seekbar_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:drawThumbsApart="false"
+            app:range1Color="#E4CAE8"
+            android:layout_marginTop="@dimen/margin_ten"
+            app:rangeColor="@color/toolbar_head"
+            android:thumb="@drawable/thumb_image"
+            app:thumbNumber="1"
+            app:trackColor="@android:color/holo_orange_dark" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="0" />
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="5,000 miles"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/margin_ten"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_twenty"
+        android:background="@color/color_divid"/>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center|start"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:background="#EBEBEB">-->
+
+        <!--<com.app.finlit.utils.views.TextViewEuphemiaRegular-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/text"-->
+            <!--android:text="ADVANCED FILTERS"-->
+            <!--android:layout_marginLeft="@dimen/margin_forty"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="@dimen/margin_twenty">-->
+
+        <!--<com.app.finlit.utils.views.TextViewEuphemiaRegular-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Looking For"-->
+            <!--android:textSize="@dimen/text"-->
+            <!--android:textColor="@color/black"/>-->
+
+        <!--<com.app.finlit.utils.views.TextViewEuphemiaRegular-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/text_blue"-->
+            <!--android:text="Casual Dates"-->
+            <!--android:textSize="@dimen/text"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true" />-->
+
+    <!--</RelativeLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_divid"/>
+
+</LinearLayout>

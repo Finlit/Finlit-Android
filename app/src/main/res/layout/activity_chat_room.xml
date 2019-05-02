@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.app.finlit.ui.chat.ChatRoomActivity">
+
+    <include layout="@layout/toolbar_options"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/padding_ten">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/color_divid"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F7F7F7"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:padding="@dimen/padding_five"
+        android:baselineAligned="false"
+        android:id="@+id/linear_below"
+        android:weightSum="3">
+
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/icon_plus"
+            android:id="@+id/iv_add_attachment"
+            android:paddingTop="@dimen/padding_fifteen"
+            android:paddingBottom="@dimen/padding_fifteen" />
+
+        <com.app.finlit.utils.views.EditTextEuphemiaRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_ten"
+            android:textSize="@dimen/text"
+            android:layout_toRightOf="@id/iv_add_attachment"
+            android:layout_toLeftOf="@id/iv_send"
+            android:hint="Type message.."
+            android:inputType="textMultiLine|textCapSentences|textNoSuggestions"
+            android:minLines="1"
+            android:imeOptions="actionDone"
+            android:textCursorDrawable="@null"
+            android:lines="4"
+            android:background="@drawable/background_edittext_send"
+            android:id="@+id/et_comment"
+            android:textColorHint="@color/hint_color"
+            android:layout_margin="@dimen/margin_five"
+            android:textColor="@color/text_color"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="50dp"
+            android:src="@mipmap/icon_send"
+            android:padding="@dimen/padding_fifteen"
+            android:id="@+id/iv_send"/>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

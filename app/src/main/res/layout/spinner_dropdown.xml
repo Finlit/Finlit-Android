@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relative_main"
+    android:background="@color/white"
+    android:layout_marginStart="@dimen/margin_ten"
+    android:layout_marginEnd="@dimen/margin_ten">
+
+    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+        android:id="@+id/txt_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_seven"
+        android:gravity="center"
+        android:background="@color/white_light"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text"
+        android:singleLine="true"/>
+
+</RelativeLayout>

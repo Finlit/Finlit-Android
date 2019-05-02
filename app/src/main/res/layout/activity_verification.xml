@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.authenticate.VerificationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true"
+            android:id="@+id/lay_verification_main">
+
+            <RelativeLayout
+                android:id="@+id/lay_verification_top"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:background="@color/colorPrimaryDark">
+
+                <ImageView
+                    android:id="@+id/iv_verification_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/icon_back"
+                    android:padding="@dimen/padding_seven"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:contentDescription="@null" />
+
+                <ImageView
+                    android:id="@+id/iv_verification_logo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/logo_verification"
+                    android:padding="@dimen/padding_five"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginTop="@dimen/margin_fifteen"
+                    android:layout_marginStart="@dimen/margin_ten"
+                    android:contentDescription="@null" />
+
+                <com.app.finlit.utils.views.TextViewEuphemiaBold
+                    android:id="@+id/txt_verification_verify_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_heading"
+                    android:textColor="@color/white"
+                    android:text="@string/account_verification"
+                    android:gravity="center"
+                    android:layout_below="@id/iv_verification_logo"
+                    android:layout_marginTop="@dimen/margin_ten"/>
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/white_light"
+                    android:layout_marginLeft="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty"
+                    android:text="@string/we_have_sent_otp_to_your_registered_email_address_nplease_type_otp_here"
+                    android:gravity="center"
+                    android:layout_below="@id/txt_verification_verify_code"
+                    android:layout_marginTop="@dimen/margin_ten"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_verification_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-100dp"
+                android:layout_below="@+id/lay_verification_top">
+
+                <View
+                    android:id="@+id/view_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="@dimen/margin_forty"
+                    android:layout_marginRight="@dimen/margin_forty"
+                    android:background="@color/pink"/>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_verification"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/view_card"
+                    android:layout_marginLeft="@dimen/margin_twenty"
+                    android:layout_marginRight="@dimen/margin_twenty"
+                    android:layout_marginBottom="@dimen/margin_five"
+                    app:elevation="@dimen/margin_seven">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text"
+                            android:gravity="center"
+                            android:textColor="@color/black_light"
+                            android:layout_marginTop="@dimen/margin_ten"
+                            android:text="@string/type_your_verification_code_here"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_gravity="center">
+
+                            <com.app.finlit.utils.views.VerificationEdittext
+                                android:id="@+id/first"
+                                android:layout_width="35dp"
+                                android:background="@mipmap/icon_verification_light"
+                                android:layout_height="40dp"
+                                android:maxLength="1"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:maxLines="1"
+                                android:gravity="center"
+                                android:nextFocusRight="@+id/second"
+                                android:layout_margin="5dp"
+                                android:textColorHint="@color/black" />
+
+                            <com.app.finlit.utils.views.VerificationEdittext
+                                android:id="@+id/second"
+                                android:layout_width="35dp"
+                                android:background="@mipmap/icon_verification_light"
+                                android:layout_height="40dp"
+                                android:maxLength="1"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:maxLines="1"
+                                android:gravity="center"
+                                android:nextFocusRight="@+id/third"
+                                android:layout_margin="5dp"
+                                android:textColorHint="@color/black" />
+
+                            <com.app.finlit.utils.views.VerificationEdittext
+                                android:id="@+id/third"
+                                android:layout_width="35dp"
+                                android:background="@mipmap/icon_verification_light"
+                                android:layout_margin="5dp"
+                                android:maxLength="1"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:gravity="center"
+                                android:ems="10"
+                                android:maxLines="1"
+                                android:nextFocusRight="@+id/fourth"
+                                android:layout_height="40dp"
+                                android:textColorHint="@color/black" />
+
+                            <com.app.finlit.utils.views.VerificationEdittext
+                                android:id="@+id/fourth"
+                                android:layout_width="35dp"
+                                android:background="@mipmap/icon_verification_light"
+                                android:layout_margin="5dp"
+                                android:maxLength="1"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:maxLines="1"
+                                android:gravity="center"
+                                android:layout_height="40dp"
+                                android:textColorHint="@color/black" />
+
+                            <com.app.finlit.utils.views.VerificationEdittext
+                                android:id="@+id/fifth"
+                                android:layout_width="35dp"
+                                android:background="@mipmap/icon_verification_light"
+                                android:layout_margin="5dp"
+                                android:maxLength="1"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:maxLines="1"
+                                android:gravity="center"
+                                android:layout_height="40dp"
+                                android:textColorHint="@color/black" />
+
+                            <com.app.finlit.utils.views.VerificationEdittext
+                                android:id="@+id/sixth"
+                                android:layout_width="35dp"
+                                android:background="@mipmap/icon_verification_light"
+                                android:layout_margin="5dp"
+                                android:maxLength="1"
+                                android:imeOptions="actionGo"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:maxLines="1"
+                                android:gravity="center"
+                                android:layout_height="40dp"
+                                android:textColorHint="@color/black" />
+
+                        </LinearLayout>
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:id="@+id/tv_submit"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="@dimen/margin_twenty"
+                            android:layout_marginLeft="@dimen/margin_twenty"
+                            android:layout_marginRight="@dimen/margin_twenty"
+                            android:text="@string/submit"
+                            android:background="@drawable/background_sign_up"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_verification_already"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:layout_below="@+id/lay_verification_card">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/text"
+                    android:text="@string/not_received_yet"/>
+
+                <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                    android:id="@+id/tv_resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_five"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/text"
+                    android:text="@string/resend_code"
+                    android:layout_marginStart="@dimen/margin_five" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_twenty_five"
+        android:layout_marginRight="@dimen/margin_twenty_five">
+
+        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+            android:id="@+id/tv_verify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_sub"
+            android:gravity="center"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+</LinearLayout>

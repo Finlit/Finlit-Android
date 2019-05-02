@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1033723018317",
+    "firebase_url": "https://iron-potion-232504.firebaseio.com",
+    "project_id": "iron-potion-232504",
+    "storage_bucket": "iron-potion-232504.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033723018317:android:cb22cd752c0bc62e",
+        "android_client_info": {
+          "package_name": "com.app.finlit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033723018317-3aie72lhsua919bkpq910v8lbp77m7bd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.finlit",
+            "certificate_hash": "52089e887ecd41ecaf442e0b99df55292cbd34ac"
+          }
+        },
+        {
+          "client_id": "1033723018317-8bfocpovrit40lln6q82gu663megigt5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYO5grDXQW98BM5pa_35o8_tqskspFwOo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033723018317-8bfocpovrit40lln6q82gu663megigt5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

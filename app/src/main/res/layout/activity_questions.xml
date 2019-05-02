@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="@mipmap/background_blue"
+    tools:context=".ui.authenticate.QuestionsActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar_questions"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_twenty_five"
+                android:layout_marginRight="@dimen/margin_twenty_five"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:orientation="vertical"
+                android:layout_above="@+id/tv_questions_next">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/margin_five"
+                    android:layout_marginRight="@dimen/margin_five">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/result_top"
+                        android:orientation="horizontal">
+
+                        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_question_que"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/text_heading"
+                            android:text="@string/q"
+                            android:layout_marginLeft="@dimen/margin_five"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:layout_marginStart="@dimen/margin_five" />
+
+                        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_question"
+                            android:textSize="@dimen/text_sub"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/margin_five"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:textColor="@color/black"
+                            android:scrollbars="vertical"
+                            android:layout_marginStart="@dimen/margin_five" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/reslut_mid"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@null"
+                        android:layerType="software"/>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/result_bottom"
+                        android:id="@+id/recycler_view" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+            android:id="@+id/tv_questions_next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:background="@drawable/background_sign_up"
+            android:textSize="@dimen/text_sub"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:text="NEXT"
+            android:layout_marginBottom="@dimen/margin_twenty"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:layout_marginRight="@dimen/margin_twenty"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

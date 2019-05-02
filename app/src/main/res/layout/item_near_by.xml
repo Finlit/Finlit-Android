@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="7dp"
+        card_view:cardPreventCornerOverlap="false"
+        app:cardElevation="@dimen/padding_three"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginBottom="@dimen/margin_five"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/margin_five"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_five"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text"
+                            android:textColor="@color/black"
+                            android:id="@+id/tv_name"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/icon_pinpoint"/>
+
+                            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:maxLines="1"
+                                android:id="@+id/tv_location"
+                                android:ellipsize="end"
+                                android:textColor="@color/black_light"
+                                android:paddingLeft="@dimen/padding_ten"
+                                android:textSize="@dimen/text_small"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_ten"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/icon_moneybag"/>
+
+                            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|start"
+                                android:id="@+id/tv_budget"
+                                android:textColor="@color/black_light"
+                                android:paddingLeft="@dimen/padding_ten"
+                                android:textSize="@dimen/text_small"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_five"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/iv_result"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:visibility="gone"
+                            android:layout_marginEnd="@dimen/margin_five"
+                            android:layout_marginRight="@dimen/margin_five"
+                            android:layout_toStartOf="@id/iv_profile"
+                            android:layout_toLeftOf="@id/iv_profile" />
+
+                        <com.app.finlit.utils.views.RoundedImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/iv_profile"
+                            android:scaleType="centerCrop"
+                            android:layout_alignParentTop="true"
+                            android:src="@mipmap/default_user_square"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginBottom="@dimen/margin_ten"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/margin_ten"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:background="@drawable/background_blue_message">
+
+                    <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Message"
+                        android:gravity="center"
+                        android:id="@+id/tv_message"
+                        android:textColor="#CDEAFF"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_white">
+
+                    <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="View Profile"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:id="@+id/tv_profile"
+                        android:textColor="#31AAFF"/>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

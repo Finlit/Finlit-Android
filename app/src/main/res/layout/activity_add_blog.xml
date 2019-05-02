@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_card"
+    tools:context="com.app.finlit.ui.blog.AddBlogActivity">
+
+    <include layout="@layout/toolbar_filter"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_twenty"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@mipmap/icon_edittext">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="Title"
+                android:textSize="@dimen/text_small"
+                android:gravity="center"
+                android:background="@mipmap/background_blog"/>
+
+            <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:id="@+id/et_title"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text"
+                android:paddingLeft="@dimen/padding_ten"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:background="@mipmap/icon_edittext">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="Description"
+                android:textSize="@dimen/text_small"
+                android:gravity="center"
+                android:background="@mipmap/background_blog"/>
+
+            <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:id="@+id/et_desc"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text"
+                android:paddingLeft="@dimen/padding_ten"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:background="@mipmap/icon_edittext">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:text="Image"
+                android:textSize="@dimen/text_small"
+                android:gravity="center"
+                android:background="@mipmap/background_blog"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:gravity="center|start"
+                    android:id="@+id/tv_image"
+                    android:layout_toLeftOf="@id/tv_upload"/>
+
+
+                <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="Upload"
+                    android:id="@+id/tv_upload"
+                    android:layout_marginTop="@dimen/margin_five"
+                    android:layout_marginBottom="@dimen/margin_five"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/text_small"
+                    android:gravity="center"
+                    android:background="@mipmap/icon_upload"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.app.finlit.utils.views.TextViewEuphemiaRegular
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_forty"
+            android:background="@drawable/background_sign_up"
+            android:text="Add"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

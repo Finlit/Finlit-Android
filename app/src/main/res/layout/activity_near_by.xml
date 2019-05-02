@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_card"
+    tools:context="com.app.finlit.ui.nearby.NearByActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.app.finlit.utils.views.ResponsiveScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear_main"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@mipmap/home_background" />
+
+                <include layout="@layout/toolbar"
+                    android:id="@+id/tool"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:id="@+id/rel"
+                    android:layout_below="@id/tool"
+                    android:layout_marginTop="-55dp">
+
+
+                    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:id="@+id/tv_quick_view"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="@dimen/padding_twenty"
+                        android:paddingRight="@dimen/padding_twenty"
+                        android:text="@string/quick_slide_view"
+                        android:gravity="center"
+                        android:textColor="#31AAFF"
+                        android:visibility="gone"
+                        android:background="@drawable/background_quick"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/iv_filter"
+                        android:padding="@dimen/padding_five"
+                        android:src="@mipmap/fiter_trans"
+                        android:layout_marginRight="@dimen/margin_twenty"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rel">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/recycler_view"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:layout_marginBottom="@dimen/margin_ten"
+                        android:layout_marginTop="60dp"/>
+
+                    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text"
+                        android:textColor="@color/text_color"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:id="@+id/tv_no_result"
+                        android:text="No user found."/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </com.app.finlit.utils.views.ResponsiveScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

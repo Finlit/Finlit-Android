@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/margin_ten"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/rel_right"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:layout_toStartOf="@+id/rel_right">
+
+            <com.app.finlit.utils.views.TextViewSegoeSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Taj Hotel"
+                android:id="@+id/tv_place_name"
+                android:textColor="@color/black"/>
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_place_name"
+                android:textColor="@color/black_light"
+                android:text="mohali"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/rel_right"
+            android:layout_alignParentEnd="true">
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srb_starSize="13dp"
+                app:srb_numberOfStars="5"
+                app:srb_stepSize="0.4"
+                app:srb_borderColor="@color/yellow"
+                app:srb_fillColor="@color/yellow"
+                />
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10km"
+                android:textColor="@color/black_light"
+                android:layout_below="@id/rating_bar"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_divid" />
+
+</LinearLayout>

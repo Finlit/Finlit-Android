@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background_splash"
+    tools:context=".ui.authenticate.SplashImagesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/margin_twenty"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:contentDescription="@null"
+            android:paddingRight="@dimen/padding_twenty_five"
+            android:paddingLeft="@dimen/padding_twenty_five"
+            android:src="@mipmap/logo_splash_screen"
+            android:layout_marginBottom="@dimen/margin_forty" />
+
+    </RelativeLayout>
+
+</FrameLayout>

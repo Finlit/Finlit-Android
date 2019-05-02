@@ -1,0 +1,69 @@
+<resources>
+
+    <string-array name="gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string name="app_name">Finlit</string>
+    <string name="share_with">Share Blog with</string>
+    <string name="facebook_app_id">254925852115960</string>
+    <string name="fb_login_protocol_scheme">fb2310294962584041</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="account_verification">VERIFICATION CODE</string>
+    <string name="next">Next</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="find_like_minded_people_for_your_financial_literacy">Find like minded people for your Financial Literacy</string>
+    <string name="or_sign_up_with_email">Or Sign Up with Email</string>
+    <string name="email">Email</string>
+    <string name="already_have_an_account">Already Have an Account?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="by_clicking_continue_with_facebook_or_sign_up">By Clicking <b></b> or <b></b>, You accept our <b></b> and <b></b>. Including our cookie use and agree to receive e-mail notification about your account which you can unsubscribe from at any time.</string>
+    <string name="sign_In">SIGN IN</string>
+    <string name="password">Password</string>
+    <string name="new_to_our_network">New to our Network?</string>
+    <string name="signUp">Sign Up</string>
+    <string name="submit">SUBMIT</string>
+    <string name="not_received_yet">Not Received Yet?</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="we_have_sent_otp_to_your_registered_email_address_nplease_type_otp_here">We have sent Verification Code to your registered Email Address. Please Type Verification Code here</string>
+    <string name="proceed">PROCEED</string>
+    <string name="gender">Gender</string>
+    <string name="location">Location</string>
+    <string name="type_your_verification_code_here">Type Your Here</string>
+    <string name="q">Q:</string>
+    <string name="thanks">THANKS</string>
+    <string name="love_it_share_now">Love it | <font color="#E94F9A">Share Now</font></string>
+    <string name="quick_slide_view">QUICK SLIDE VIEW</string>
+    <string name="username">Username</string>
+    <string name="get_started">GET STARTED</string>
+    <string name="type_message">Type message..</string>
+    <string name="version_code">VERSION CODE:</string>
+    <string name="pay_for_quiz">PAY FOR QUIZ</string>
+    <string name="you_need_to_pay_5_for_taking_finlit_quiz_again">Take the Finlit Quiz again to place in to a higher tier!</string>
+    <string name="cancel">CANCEL</string>
+    <string name="pay_now">PAY NOW</string>
+
+    <string-array name="interest">
+        <item>What common interests would you like to share with other members?</item>
+        <item>Who are you looking for?</item>
+        <item>What is your eye color?</item>
+        <item>What is your hair color?</item>
+        <item>What is your faith?</item>
+        <item>What’s your level of education?</item>
+        <item>How often do you exercise?</item>
+        <item>Do you smoke?</item>
+        <item>How often do you drink?</item>
+        <item>Do you have any kids?</item>
+        <item>Do you want children?</item>
+        <item>What’s your current annual income?</item>
+        <item>What are you saving for?</item>
+        <item>What kind of exercise do you enjoy?</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

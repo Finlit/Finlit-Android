@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.app.finlit.ui.dates.PendingFragment">
+    <com.app.finlit.utils.views.TextViewEuphemiaRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text"
+        android:textColor="@color/text_color"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/tv_no_result"
+        android:text="No Pending Dates."/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipeRefreshLayout"
+        >
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_five"
+        android:id="@+id/recycler_view" />
+  //  </android.support.v4.widget.SwipeRefreshLayout>
+
+</FrameLayout>

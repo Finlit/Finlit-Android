@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toolbar_head">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/sign_up_logo"
+        android:contentDescription="@null"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_logo"
+        android:layout_marginTop="@dimen/margin_thirty"
+        android:gravity="center">
+
+        <com.app.finlit.utils.views.TextViewEuphemiaBold
+            android:id="@+id/txt_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_heading"
+            android:text="@string/version_code"/>
+
+        <com.app.finlit.utils.views.TextViewEuphemiaBold
+            android:id="@+id/txt_version_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/margin_five"
+            android:layout_toRightOf="@id/txt_version"
+            android:textSize="@dimen/text_heading"
+            android:layout_marginStart="@dimen/margin_five"
+            android:layout_toEndOf="@id/txt_version" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

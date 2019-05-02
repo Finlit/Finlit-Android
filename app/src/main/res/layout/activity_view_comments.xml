@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.blog.ViewCommentsActivity">
+
+    <include
+        android:id="@+id/ttt"
+        layout="@layout/toolbar_filter" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ttt"
+        android:layout_above="@+id/linear_below"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin_five"
+    android:layout_below="@+id/ttt"
+    android:layout_height="match_parent">
+
+
+        <com.app.finlit.utils.views.RoundedImageView
+            android:id="@+id/postimage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="@dimen/margin_five"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_user_square" />
+
+        <LinearLayout
+            android:id="@+id/jjj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postimage"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:gravity="center|start"
+            android:orientation="vertical">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:id="@+id/tv_titleblog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A headline appear higher"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text" />
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/tv_by_title"
+                android:textColor="@color/black_light" />
+
+        </LinearLayout>
+
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jjj"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:text="sd,m,mdsbmbdmncmndbcnbnmcnxnn czxcm xzcnzxcnzczmcnbxbcnxcmxcxncbcmcm"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text"
+            app:colorClickableText="@android:color/holo_blue_light"
+            app:trimCollapsedText="  Show less"
+            app:trimLength="60"
+            app:trimMode="trimModeLength" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="@dimen/margin_five">
+
+        </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/linear_below"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#F7F7F7"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:layout_margin="@dimen/margin_three"
+                android:id="@+id/iv_comment"
+                />
+
+            <com.app.finlit.utils.views.EditTextEuphemiaRegular
+                android:id="@+id/et_comments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:hint="Type your Comment"
+                android:imeOptions="actionDone"
+                android:background="@null"
+                android:inputType="textMultiLine|textCapSentences|textNoSuggestions"
+                android:lines="4"
+                android:minLines="1"
+                android:padding="@dimen/padding_fifteen"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text" />
+            <View
+                android:layout_width="0.5dp"
+                android:id="@+id/llll"
+                android:background="@android:color/darker_gray"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/iv_send"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:textColor="@color/pink"
+                android:padding="@dimen/padding_fifteen"
+                android:text="Send" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>

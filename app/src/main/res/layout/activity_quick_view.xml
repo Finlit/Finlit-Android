@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/text_grey"
+    tools:context="com.app.finlit.ui.nearby.QuickViewActivity">
+
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewPagerbackground"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center" />-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@mipmap/background_blue" />-->
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewpagerTop"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:clipToPadding="false"-->
+        <!--android:paddingLeft="30dp"-->
+        <!--android:paddingRight="30dp"-->
+        <!--android:paddingTop="100dp"-->
+        <!--android:paddingBottom="120dp"-->
+        <!--android:layout_gravity="center" />-->
+
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/card_stack_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_heading"
+        android:layout_marginTop="@dimen/margin_twenty"
+        android:layout_marginBottom="@dimen/margin_twenty"
+        android:layout_above="@id/linear_bottom"/>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/iv_left"
+        android:src="@mipmap/icon_back"
+        android:layout_margin="@dimen/margin_ten"
+        android:padding="@dimen/padding_seven"
+        android:contentDescription="@null" />
+
+    <com.app.finlit.utils.views.TextViewSegoeSemiBold
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:text="Quick View"
+        android:layout_marginTop="@dimen/margin_forty"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_heading" />
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linear_bottom"
+        android:layout_marginBottom="@dimen/margin_twenty"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_twenty"
+            android:paddingRight="@dimen/padding_twenty"
+            android:paddingStart="@dimen/padding_twenty"
+            android:paddingEnd="@dimen/padding_ten">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_next"
+                android:background="@drawable/background_curousel_next"
+                android:text="@string/next"
+                android:textSize="@dimen/text"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_twenty"
+            android:paddingRight="@dimen/padding_twenty">
+
+            <com.app.finlit.utils.views.TextViewEuphemiaRegular
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_message"
+                android:background="@drawable/background_curousel_message"
+                android:text="Message"
+                android:gravity="center"
+                android:textSize="@dimen/text"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

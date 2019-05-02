@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/background_blue"
+    tools:context="com.app.finlit.ui.authenticate.ResultActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rel_result"
+            android:layout_marginLeft="@dimen/margin_twenty_five"
+            android:layout_marginRight="@dimen/margin_twenty_five"
+            android:layout_marginTop="@dimen/margin_thirty"
+            android:layout_marginBottom="@dimen/margin_ten"
+            android:layout_above="@+id/tv_thanks">
+
+
+        </RelativeLayout>
+
+
+        <com.app.finlit.utils.views.TextViewSegoeSemiBold
+            android:id="@+id/tv_thanks"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:background="@drawable/background_sign_up"
+            android:textSize="@dimen/text_sub"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:text="@string/thanks"
+            android:layout_marginBottom="@dimen/margin_twenty"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:layout_marginRight="@dimen/margin_twenty"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
